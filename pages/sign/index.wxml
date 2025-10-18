@@ -6,7 +6,7 @@
           <text class="text-black">{{item.create_time}}</text>
         </view>
         <view class="sign-content">
-          <view class="cuIcon-locationfill text-grey"></view>
+          <view class="cuIcon-locationfill text-green"></view>
           <text class="text-gray">{{item.lon}}, {{item.lat}}</text>
         </view>
       </view>
@@ -14,6 +14,11 @@
 
     <view class="button-wrap">
       <view class="sign-button bg-gradual-green round" bind:tap="sign">打卡</view>
+    </view>
+
+    <view class="tips text-gray">
+      <view class="tips-item">只展示当天最近五条打卡记录。</view>
+      <view class="tips-item">请授予定位权限，否则无法打卡。</view>
     </view>
   </g-scroll>
 </g-layout>
