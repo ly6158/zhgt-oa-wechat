@@ -1,0 +1,36 @@
+.add-report {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 80rpx;
+  right: 80rpx;
+  z-index: 9;
+  line-height: 120rpx;
+  text-align: center;
+  font-size: 48rpx;
+}
+
+.report-item{
+  display: flex;
+  flex-direction: column;
+  padding-top: 16rpx !important;
+  padding-bottom: 16rpx !important;
+}
+
+.report-date{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+}
+
+.report-content{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 24rpx;
+  margin-top: 8rpx;
+  text-indent: 2em;
+}
+

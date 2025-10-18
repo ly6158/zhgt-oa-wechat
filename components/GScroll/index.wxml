@@ -1,0 +1,3 @@
+<scroll-view class="g-scroll" enhanced show-scrollbar="{{false}}" enable-flex scroll-y scroll-with-animation>
+  <slot></slot>
+</scroll-view>

@@ -1,0 +1,25 @@
+<g-layout title="首页" isTabBar="{{false}}" loading="{{page_loading}}">
+  <g-scroll>
+    <view class="list">
+      <view class="item bg-gradual-red" bindtap="report">
+        <view class="left">
+          <view class="title">日报</view>
+          <view class="describe">总结今天的工作内容</view>
+        </view>
+        <view class="right">
+          <view class="icon cuIcon-form"></view>
+        </view>
+      </view>
+
+      <view class="item bg-gradual-orange" bindtap="sign">
+        <view class="left">
+          <view class="title">打卡</view>
+          <view class="describe">总结今天的工作内容</view>
+        </view>
+        <view class="right">
+          <view class="icon cuIcon-locationfill"></view>
+        </view>
+      </view>
+    </view>
+  </g-scroll>
+</g-layout>

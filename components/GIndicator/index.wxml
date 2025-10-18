@@ -1,0 +1,1 @@
+<view class="common-indicator-line" style="height: {{indicatorHeight}}px;background-color: {{backgroundColor}};"></view>

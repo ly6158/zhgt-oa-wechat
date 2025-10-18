@@ -1,0 +1,28 @@
+<scroll-view class="vant-scroll-view" id="scroller" scroll-with-animation="{{scrollWithAnimation}}" scroll-anchoring enable-passive show-scrollbar="{{false}}" enable-flex scroll-y="{{isSrollY}}" scroll-top="{{	scrollTop}}" lower-threshold="{{100}}" bind:scroll="onScroll" bindscrolltolower="onLoadMore" using-sticky="{{usingSticky}}" bindrefresherrefresh="onDropDown" refresher-enabled="{{refresherEnabled}}" refresher-triggered="{{refresherTriggered}}">
+
+  <view class="scroll-view__top" id="scrollViewTop">
+    <slot name="top"></slot>
+  </view>
+
+  <view style="width: 100%; height: calc(100% - {{top_height}}px);min-height: {{minHeight}};">
+  
+    <view class="scroll-view__content" wx:if="{{total !== 0 && (!refresherTriggered && !isLoading || total > 0)}}">
+      <slot></slot>
+    </view>
+
+    <!-- 下拉刷新状态 -->
+    <view class="scroll-view__loading" wx:if="{{refresherTriggered}}">
+      <!-- <van-loading type="spinner" color="#909399" /> -->
+    </view>
+
+    <!-- 条数为0 且不是加载状态 -->
+    <view class="scroll-view__empty" wx:if="{{(!refresherTriggered && !isLoading && total === 0 && showEmpty)}}">
+      <!-- <c-empty></c-empty> -->
+    </view>
+    <!-- 底部  -->
+    <view class="scroll-view__footer" wx:if="{{!refresherTriggered && (isLoading || isCompleted)}}">
+      <!-- <van-loading wx:if="{{isLoading}}" color="#909399" size="16px">加载中...</van-loading> -->
+      <text wx:if="{{isCompleted}}" class="is-completed__text text-grey">没有更多了</text>
+    </view>
+  </view>
+</scroll-view>

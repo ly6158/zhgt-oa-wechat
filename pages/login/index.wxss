@@ -1,0 +1,16 @@
+.login-wrap{
+  height: 100%;
+}
+
+.login-title {
+  font-size: 64rpx;
+  margin-top: 15vh;
+}
+
+
+
+.login-input {
+  
+  width: calc(100% - 16rpx - 28rpx);
+  margin-left: 16rpx;
+}

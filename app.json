@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/index",
+    "pages/home/index",
+    "pages/report/edit/index",
+    "pages/report/list/index",
+    "pages/material/index",
+    "pages/sign/index"
+  ],
+  "requiredPrivateInfos":["getLocation"],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于公司考勤"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "title",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
+  },
+  "usingComponents": {
+    "list-scroll": "/components/ListScroll/index",
+    "cu-custom": "/colorui/components/cu-custom",
+    "g-indicator": "/components/GIndicator/index",
+    "g-tab-bar": "/components/GTabBar/index",
+    "g-layout": "/components/GLayout/index",
+    "g-scroll": "/components/GScroll/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-picker": "@vant/weapp/picker/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-grid": "@vant/weapp/grid/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "van-nav-bar": "@vant/weapp/nav-bar/index"
+  },
+  "sitemapLocation": "sitemap.json",
+  "resolveAlias": {
+    "~/*": "/*",
+    "@/*": "/pages/*"
+  }
+}

@@ -1,0 +1,6 @@
+<view class="global-tab-bar">
+  <view class="global-tab-bar__button {{menu === item.name ? 'active_button' : ''}}" wx:for="{{tabBarList}}" wx:key="{{item.name}}" data-menu="home" bindtap="goTabBar" data-item="{{item}}">
+    <view class="iconfont {{item.icon}}"></view>
+    <text class="button__content {{menu === item.name ? 'active' : '' }}">{{item.name}}</text>
+  </view>
+</view>

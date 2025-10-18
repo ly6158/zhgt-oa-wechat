@@ -1,0 +1,25 @@
+<view class="g-layout" style="background-color: {{backgroundColor}};">
+  <!-- 导航栏 -->
+  <view class="g-layout__navigation" style="height: {{navigationHeight}}px" wx:if="{{showNavigation}}">
+    <cu-custom bgColor="bg-gradual-blue" isBack="{{isBack}}">
+      <text slot="content">{{title}}</text>
+    </cu-custom>
+  </view>
+
+  <!-- 主要内容区域 -->
+  <view class="g-layout__main" style="height: calc(100% - {{showNavigation ? navigationHeight : 0}}px - {{isTabBar ? '60px' : '0px'}} - {{indicatorHeight}}px)">
+    <view class="g-layout-loading" wx:if="{{loading}}">
+      <view class="loading-box">
+        <van-loading size="40px" vertical color="#ffffff"></van-loading>
+        <text class="loading-text">加载中...</text>
+      </view>
+    </view>
+
+    <slot></slot>
+  </view>
+
+  <!-- 底部菜单 -->
+  <g-tab-bar wx:if="{{isTabBar}}" menu="{{menu}}" />
+  <!-- 指示线 -->
+  <g-indicator backgroundColor="{{ isTabBar ? '#ffffff' : lineColor}}" />
+</view>

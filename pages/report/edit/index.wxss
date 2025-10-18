@@ -1,0 +1,4 @@
+.submit-report{
+  width: calc(100% - 64rpx);
+  margin: 32rpx;
+}

@@ -1,0 +1,31 @@
+<g-layout title="写日报" isTabBar="{{false}}" isBack="{{true}}" loading="{{page_loading}}">
+  <g-scroll>
+    <van-cell-group>
+      <van-cell title="关联项目" value="{{projectName}}" is-link bind:click="onChooseProject" />
+      <van-cell title="业务类型" value="{{form.business_type}}" is-link bind:click="onChooseBusinessType" />
+      <van-field label="工作量" model:value="{{ form.quantity }}" clearable>
+        <van-button slot="button" size="mini" plain type="primary" bind:click="onChooseUnit">{{form.unit}}</van-button>
+      </van-field>
+      <van-field label="日报内容" type="textarea" model:value="{{ content }}" autosize placeholder="日报内容" />
+    </van-cell-group>
+
+    <!-- 关联项目列表 -->
+    <van-popup show="{{ isProjectPopup }}" position="bottom" bind:close="onProjectCancel">
+      <van-picker show-toolbar columns="{{ projectList }}" bind:confirm="onProjectConfirm" bind:cancel="onProjectCancel" />
+    </van-popup>
+
+    <!-- 业务类型 businessType -->
+    <van-popup show="{{ isBusinessTypePopup }}" position="bottom" bind:close="onBusinessTypeCancel">
+      <van-picker show-toolbar columns="{{ businessTypeList }}" bind:confirm="onBusinessTypeConfirm" bind:cancel="onBusinessTypeCancel" />
+    </van-popup>
+
+    <!-- 单位 -->
+    <van-popup show="{{ isUnitPopup }}" position="bottom" bind:close="onUnitCancel">
+      <van-picker show-toolbar columns="{{ unitList }}" bind:confirm="onUnitConfirm" bind:cancel="onUnitCancel" />
+    </van-popup>
+
+    <button class="submit-report cu-btn bg-gradual-green lg" bind:tap="onSubmit">保存</button>
+  </g-scroll>
+</g-layout>
+
+<van-toast id="van-toast" />

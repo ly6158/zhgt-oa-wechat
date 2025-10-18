@@ -1,0 +1,21 @@
+<cu-custom bgColor="bg-gradual-blue">
+  <view slot="content">登录</view>
+</cu-custom>
+
+<view class="login-wrap light bg-white padding flex flex-direction align-center">
+  <view class="login-title text-cut text-cyan margin-bottom-xl">纵横国土</view>
+
+  <view class="round padding-sm shadow solid margin-bottom-xl text-left flex align-center" style="width: 600rpx">
+      <i class="cuIcon-my text-cyan"></i>
+      <input class="login-input" value="{{form.account}}" placeholder-class="text-cyan" bindinput="onAccountChange" placeholder="账号"></input>
+    </view>
+    <view class="round padding-sm shadow solid margin-bottom-xl text-left flex align-center" style="width: 600rpx;">
+      <i class="cuIcon-lock text-cyan"></i>
+      <input class="login-input" value="{{form.password}}" placeholder-class="text-cyan" bindinput="onPasswordChange" placeholder="密码" password></input>
+    </view>
+    <button class="cu-btn round shadow bg-gradual-blue shadow" style="width: 600rpx;height: 80rpx;" bindtap="login">登录</button>
+
+  <view class="text-sm margin-top-xl text-gray flex justify-center align-center" style="width: 600rpx">该小程序仅适用于纵横国土内部办公使用</view>
+</view>
+
+<van-toast id="van-toast" />

@@ -1,0 +1,21 @@
+<g-layout title="打卡" isTabBar="{{false}}" isBack="{{true}}" loading="{{page_loading}}">
+  <g-scroll>
+    <view class="cu-list menu sm-border ">
+      <view class="sign-item cu-item" wx:for="{{list}}" data-item="{{item}}">
+        <view class="sign-date">
+          <text class="text-black">{{item.create_time}}</text>
+        </view>
+        <view class="sign-content">
+          <view class="cuIcon-locationfill text-grey"></view>
+          <text class="text-gray">{{item.lon}}, {{item.lat}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="button-wrap">
+      <view class="sign-button bg-gradual-green round" bind:tap="sign">打卡</view>
+    </view>
+  </g-scroll>
+</g-layout>
+
+<van-toast id="van-toast" />

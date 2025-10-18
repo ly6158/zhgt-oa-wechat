@@ -1,0 +1,36 @@
+.vant-scroll-view {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.scroll-view__loading {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-view__empty {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-view__footer {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 36rpx;
+}
+
+.is-completed__text {
+  font-size: 24rpx;
+}
