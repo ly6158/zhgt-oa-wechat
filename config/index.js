@@ -12,7 +12,7 @@ const Config = {
     FilePath: "/assets/zhgt",
   }, // 测试服务
   pro: {
-    BaseUrl: "https://case.mujunkj.cn",
+    BaseUrl: "https://zhgt.mujunkj.cn",
     ContextPath: "/zhgt-server",
     FilePath: "/assets/zhgt",
   }, // 正式服务
@@ -24,6 +24,6 @@ const Config = {
  * dev 本地服务
  * 重要: 禁止连正式版库测试
  */
-const env = "dev";
+const env = "pro";
 
 export default Config[env];
