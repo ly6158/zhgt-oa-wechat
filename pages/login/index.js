@@ -3,8 +3,8 @@ import * as API from "~/api/user"
 Page({
   data: {
     form: {
-      account: "liuyang",
-      password: "00000000",
+      account: "",
+      password: "",
     }
   },
   onLoad(options) {
