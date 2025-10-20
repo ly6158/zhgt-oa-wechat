@@ -15,5 +15,10 @@ Page({
     wx.navigateTo({
       url: '/pages/sign/index'
     })
+  },
+  material(){
+    wx.navigateTo({
+      url: '/pages/material/index'
+    })
   }
 })
