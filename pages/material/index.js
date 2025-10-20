@@ -1,8 +1,11 @@
 import CommonList from "~/behaviors/common-list"
+import * as API from "~/api/file"
+import {
+  getFileIcon
+} from "./data"
 import {
   formatTime
 } from '~/utils/util';
-import * as API from "~/api/file"
 
 Page({
   behaviors: [CommonList],
@@ -10,10 +13,10 @@ Page({
 
   },
   onLoad(options) {
-
+    this.onRefresh()
   },
   onShow() {
-    this.onRefresh()
+    
   },
   getList() {
     return new Promise((resolve, reject) => {
@@ -25,7 +28,8 @@ Page({
           const list = res.data.list.reduce((r, c) => {
             r.push({
               ...c,
-              create_time: formatTime(new Date(c.create_time).getTime())
+              create_time: formatTime(new Date(c.create_time).getTime()),
+              icon: getFileIcon(c.suffix)
             })
             return r
           }, [])

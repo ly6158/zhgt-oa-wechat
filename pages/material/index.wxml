@@ -3,7 +3,7 @@
     <view class="cu-list menu sm-border ">
       <view class="material-item cu-item" wx:for="{{list}}" data-item="{{item}}">
 
-        <image class="suffix" src="/assets/images/file-excel.png" mode="aspectFit"/>
+        <image class="suffix" src="/assets/images/{{item.icon}}.png" mode="aspectFit"/>
 
         <view class="right">
           <text class="text-black name">{{item.originalname}}.{{item.suffix}}</text>
