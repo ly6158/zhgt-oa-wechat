@@ -1,2 +1,15 @@
-<!--pages/material/index.wxml-->
-<text>pages/material/index.wxml</text>
+<g-layout title="文档" isTabBar="{{false}}" isBack="{{true}}" loading="{{page_loading}}">
+  <list-scroll isLoading="{{isLoading}}" isCompleted="{{isCompleted}}" refresherTriggered="{{isRefresherTriggered}}" total="{{total}}" bind:scrolltoupper="onDropDown">
+    <view class="cu-list menu sm-border ">
+      <view class="material-item cu-item" wx:for="{{list}}" data-item="{{item}}">
+
+        <image class="suffix" src="/assets/images/file-excel.png" mode="aspectFit"/>
+
+        <view class="right">
+          <text class="text-black name">{{item.originalname}}.{{item.suffix}}</text>
+          <text class="text-gray date">{{item.create_time}}</text>
+        </view>
+      </view>
+    </view>
+  </list-scroll>
+</g-layout>

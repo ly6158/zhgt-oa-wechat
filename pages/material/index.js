@@ -1,66 +1,54 @@
-// pages/material/index.js
-Page({
+import CommonList from "~/behaviors/common-list"
+import {
+  formatTime
+} from '~/utils/util';
+import * as API from "~/api/file"
 
-  /**
-   * 页面的初始数据
-   */
+Page({
+  behaviors: [CommonList],
   data: {
 
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad(options) {
 
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
   onShow() {
-
+    this.onRefresh()
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
+  getList() {
+    return new Promise((resolve, reject) => {
+      API.search({
+        module: "material",
+        category: "0",
+      }).then(res => {
+        if (res && res.code === 200) {
+          const list = res.data.list.reduce((r, c) => {
+            r.push({
+              ...c,
+              create_time: formatTime(new Date(c.create_time).getTime())
+            })
+            return r
+          }, [])
+          let allList = [].concat(this.data.list, list)
+          this.setData({
+            list: allList,
+            total: res.data.total,
+          })
+          resolve()
+        } else {
+          this.setData({
+            list: [],
+            total: 0
+          })
+          reject()
+        }
+      }).catch(err => {
+        this.setData({
+          list: [],
+          total: 0
+        })
+        reject()
+      })
+    })
   }
 })
