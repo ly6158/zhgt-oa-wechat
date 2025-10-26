@@ -30,6 +30,7 @@
     "g-tab-bar": "/components/GTabBar/index",
     "g-layout": "/components/GLayout/index",
     "g-scroll": "/components/GScroll/index",
+    "c-empty": "/components/CEmpty/index",
     "van-cell-group": "@vant/weapp/cell-group/index",
     "van-field": "@vant/weapp/field/index",
     "van-button": "@vant/weapp/button/index",
@@ -40,7 +41,8 @@
     "van-grid": "@vant/weapp/grid/index",
     "van-icon": "@vant/weapp/icon/index",
     "van-grid-item": "@vant/weapp/grid-item/index",
-    "van-nav-bar": "@vant/weapp/nav-bar/index"
+    "van-nav-bar": "@vant/weapp/nav-bar/index",
+    "van-loading": "@vant/weapp/loading/index"
   },
   "sitemapLocation": "sitemap.json",
   "resolveAlias": {
