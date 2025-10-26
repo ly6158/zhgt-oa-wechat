@@ -1,5 +1,5 @@
 <g-layout title="日报" isTabBar="{{false}}" isBack="{{true}}" loading="{{page_loading}}">
-  <list-scroll isLoading="{{isLoading}}" isCompleted="{{isCompleted}}" refresherTriggered="{{isRefresherTriggered}}" total="{{total}}" bind:scrolltoupper="onDropDown">
+  <list-scroll isLoading="{{isLoading}}" isCompleted="{{isCompleted}}" refresherTriggered="{{isRefresherTriggered}}" total="{{total}}" bind:scrolltoupper="onDropDown" bind:scrolltolower="onLoadMore">
     <view class="cu-list menu sm-border ">
       <view class="report-item cu-item" wx:for="{{list}}" data-item="{{item}}">
         <view class="report-date">

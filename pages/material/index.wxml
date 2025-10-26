@@ -1,5 +1,5 @@
 <g-layout title="文档" isTabBar="{{false}}" isBack="{{true}}" loading="{{page_loading}}">
-  <list-scroll isLoading="{{isLoading}}" isCompleted="{{isCompleted}}" refresherTriggered="{{isRefresherTriggered}}" total="{{total}}" bind:scrolltoupper="onDropDown">
+  <list-scroll isLoading="{{isLoading}}" isCompleted="{{isCompleted}}" refresherTriggered="{{isRefresherTriggered}}" total="{{total}}" bind:scrolltoupper="onDropDown" bind:scrolltolower="onLoadMore">
     <view class="cu-list menu sm-border ">
       <view class="material-item cu-item" wx:for="{{list}}" data-item="{{item}}">
 
