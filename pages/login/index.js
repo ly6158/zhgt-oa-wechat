@@ -2,24 +2,23 @@ import Toast from '@vant/weapp/toast/toast';
 import * as API from "~/api/user"
 Page({
   data: {
-    form: {
-      account: "",
-      password: "",
-    }
+    account: "",
+    password: "",
   },
   onLoad(options) {
 
   },
 
   onAccountChange(e) {
-    this.form.account = e.detail.value
+    // this.form.account = e.detail.value
   },
   onPasswordChange(e) {
-    this.form.password = e.detail.value
+    // this.form.password = e.detail.value
   },
   login() {
     API.login({
-      ...this.data.form,
+      account:this.data.account,
+      password:this.data.password,
       code: "000000",
       t: new Date().getTime()
     }).then(res => {
