@@ -17,11 +17,11 @@
 
     <!-- 条数为0 且不是加载状态 -->
     <view class="scroll-view__empty" wx:if="{{(!refresherTriggered && !isLoading && total === 0 && showEmpty)}}">
-      <!-- <c-empty></c-empty> -->
+      <c-empty></c-empty>
     </view>
     <!-- 底部  -->
-    <view class="scroll-view__footer" wx:if="{{!refresherTriggered && (isLoading || isCompleted)}}">
-      <!-- <van-loading wx:if="{{isLoading}}" color="#909399" size="16px">加载中...</van-loading> -->
+    <view class="scroll-view__footer" wx:if="{{!refresherTriggered && (isLoading || isCompleted) && total > 0}}">
+      <van-loading wx:if="{{isLoading}}" color="#909399" size="16px">加载中...</van-loading>
       <text wx:if="{{isCompleted}}" class="is-completed__text text-grey">没有更多了</text>
     </view>
   </view>

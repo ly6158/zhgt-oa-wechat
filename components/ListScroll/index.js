@@ -65,6 +65,7 @@ Component({
    */
   methods: {
     onLoadMore() {
+      console.log('ListScroll - onLoadMore');
       this.triggerEvent('scrolltolower')
     },
     onDropDown() {
