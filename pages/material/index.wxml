@@ -3,11 +3,15 @@
     <view class="cu-list menu sm-border ">
       <view class="material-item cu-item" wx:for="{{list}}" data-item="{{item}}">
 
-        <image class="suffix" src="/assets/images/{{item.icon}}.png" mode="aspectFit"/>
+        <image class="suffix" src="/assets/images/{{item.icon}}.png" mode="aspectFit" />
 
-        <view class="right">
+        <view class="content">
           <text class="text-black name">{{item.originalname}}.{{item.suffix}}</text>
           <text class="text-gray date">{{item.create_time}}</text>
+        </view>
+
+        <view class="operation">
+          <view class="download text-cyan" data-item="{{item}}" bind:tap="download">下载</view>
         </view>
       </view>
     </view>
