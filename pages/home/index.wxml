@@ -21,7 +21,7 @@
         </view>
       </view>
 
-      <view class="item bg-gradual-pink" bindtap="material">
+      <!-- <view class="item bg-gradual-pink" bindtap="material">
         <view class="left">
           <view class="title">文档</view>
           <view class="describe">公司的内部资料，禁止分享。</view>
@@ -29,7 +29,7 @@
         <view class="right">
           <view class="icon cuIcon-file"></view>
         </view>
-      </view>
+      </view> -->
     </view>
   </g-scroll>
 </g-layout>
