@@ -5,7 +5,6 @@
     "pages/home/index",
     "pages/report/edit/index",
     "pages/report/list/index",
-    "pages/material/index",
     "pages/sign/index"
   ],
   "requiredPrivateInfos": [
