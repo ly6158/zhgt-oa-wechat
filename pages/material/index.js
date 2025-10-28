@@ -61,42 +61,30 @@ Page({
       })
     })
   },
-  download(e) {
+  shareFile(e) {
     const {item} = e.target.dataset
-    console.log("附件路径: ",item.path);
-
     const url = `${BaseUrl}${FilePath}${item.path}`
-
-    console.log('下载路径: ',url);
-
     wx.downloadFile({
       url: url,
       success:(res)=>{
         if (res.statusCode === 200) {
           const tempFilePath = res.tempFilePath;
-
-          console.log('tempFilePath',tempFilePath);
-
-          wx.getFileSystemManager().saveFile({
-            tempFilePath: tempFilePath,
-            filePath: `${wx.env.USER_DATA_PATH}/${item.originalname}.${item.suffix}`,
-            success: (saveRes) => {
-              const savedFilePath = saveRes.savedFilePath;
-
-              wx.openDocument({
-                filePath: savedFilePath,
-                showMenu: true, // 关键：显示菜单，用户可进行转发、保存等操作
-                success: () => {
-                  console.log('打开文档成功');
-                },
-                fail: (openErr) => {
-                  console.error('打开文档失败:', openErr);
-                }
+          wx.shareFileMessage({
+            filePath: tempFilePath,
+            fileName:`${item.originalname}.${item.suffix}`,
+            success: () => {
+              wx.showToast({
+                title: '分享成功',
+                icon: 'success'
+              });
+            },
+            fail: (err) => {
+              wx.showToast({
+                title: '当前文件不支持分享',
+                icon: 'none'
               });
             }
-          })
-
-          
+          });
         }
       }
     })

@@ -11,7 +11,7 @@
         </view>
 
         <view class="operation">
-          <view class="download text-cyan" data-item="{{item}}" bind:tap="download">下载</view>
+          <view class="download text-cyan" data-item="{{item}}" bind:tap="shareFile">分享</view>
         </view>
       </view>
     </view>
