@@ -16,9 +16,13 @@ import {
 Page({
   behaviors: [CommonList],
   data: {
-
+    id: "",
+    module: "project-interior" // 内业
   },
   onLoad(options) {
+    this.setData({
+      id: options.id
+    })
     this.onRefresh()
   },
   onShow() {
@@ -27,8 +31,8 @@ Page({
   getList() {
     return new Promise((resolve, reject) => {
       API.all({
-        module: "material",
-        category: "0",
+        module: this.data.module,
+        category: this.data.id,
       }).then(res => {
         if (res && res.code === 200) {
           const list = res.data.reduce((r, c) => {
@@ -62,16 +66,18 @@ Page({
     })
   },
   shareFile(e) {
-    const {item} = e.target.dataset
+    const {
+      item
+    } = e.target.dataset
     const url = `${BaseUrl}${FilePath}${item.path}`
     wx.downloadFile({
       url: url,
-      success:(res)=>{
+      success: (res) => {
         if (res.statusCode === 200) {
           const tempFilePath = res.tempFilePath;
           wx.shareFileMessage({
             filePath: tempFilePath,
-            fileName:`${item.originalname}.${item.suffix}`,
+            fileName: `${item.originalname}.${item.suffix}`,
             success: () => {
               wx.showToast({
                 title: '分享成功',
