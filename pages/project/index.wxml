@@ -1,0 +1,19 @@
+<g-layout title="项目" isTabBar="{{false}}" isBack="{{true}}" loading="{{page_loading}}">
+  <list-scroll isLoading="{{isLoading}}" isCompleted="{{isCompleted}}" refresherTriggered="{{isRefresherTriggered}}" total="{{total}}" bind:scrolltoupper="onDropDown" bind:scrolltolower="onLoadMore">
+    <view class="cu-list menu sm-border ">
+      <view class="project-item cu-item" wx:for="{{list}}" data-item="{{item}}" bind:tap="toMaterial">
+        <view class="project-info">
+          <view class="project-name">
+            <text class="text-black">{{item.name}}</text>
+          </view>
+          <view class="project-content">
+            <c-customer customer="{{item.customer}}" />
+          </view>
+        </view>
+        <view class="arrow">
+          <text class="cuIcon-right text-grey"></text>
+        </view>
+      </view>
+    </view>
+  </list-scroll>
+</g-layout>
