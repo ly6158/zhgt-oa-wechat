@@ -16,9 +16,9 @@ Page({
       url: '/pages/sign/index'
     })
   },
-  material(){
+  project(){
     wx.navigateTo({
-      url: '/pages/material/index'
+      url: '/pages/project/index'
     })
   }
 })
