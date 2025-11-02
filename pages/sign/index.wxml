@@ -1,23 +1,33 @@
 <g-layout title="打卡" isTabBar="{{false}}" isBack="{{true}}" loading="{{page_loading}}">
   <g-scroll>
-    <view class="cu-list menu sm-border ">
-      <view class="sign-item cu-item" wx:for="{{list}}" data-item="{{item}}">
-        <view class="sign-date">
-          <text class="text-black">{{item.create_time}}</text>
+    <view class="list">
+      <view class="item light {{sign_in.type === 'sign-in' ? 'bg-green' : 'bg-grey'}}" bind:tap="signIn">
+        <view class="left">
+          <view class="title">{{sign_in.type === 'sign-in' ? '已' : '未'}}签到</view>
+          <view class="describe" wx:if="{{sign_in.type === 'sign-in'}}">签到时间 {{sign_in.create_time}}</view>
+          <view class="describe" wx:else>签到时间 00:00 - 11:59</view>
         </view>
-        <view class="sign-content">
-          <view class="cuIcon-locationfill text-green"></view>
-          <text class="text-gray">{{item.lon}}, {{item.lat}}</text>
+        <view class="right">
+          <view class="icon cuIcon-check" wx:if="{{sign_in.type === 'sign-in'}}"></view>
+          <view class="icon cuIcon-locationfill" wx:else></view>
+        </view>
+      </view>
+
+      <view class="item light {{sign_out.type === 'sign-out' ? 'bg-green' : 'bg-grey'}}"  bind:tap="signOut">
+        <view class="left">
+          <view class="title">{{sign_out.type === 'sign-out' ? '已' : '未'}}签退</view>
+          <view class="describe" wx:if="{{sign_out.type === 'sign-out'}}">签退时间 {{sign_out.create_time}}</view>
+          <view class="describe" wx:else>签退时间 12:00 - 23:59</view>
+        </view>
+        <view class="right">
+          <view class="icon cuIcon-check" wx:if="{{sign_out.type === 'sign-out'}}"></view>
+          <view class="icon cuIcon-locationfill" wx:else></view>
         </view>
       </view>
     </view>
 
-    <view class="button-wrap">
-      <view class="sign-button bg-gradual-green round" bind:tap="sign">打卡</view>
-    </view>
-
-    <view class="tips text-gray">
-      <view class="tips-item">只展示当天最近五条打卡记录。</view>
+    <view class="tips text-red">
+      <view class="tips-item">不在打卡时间范围内无法打卡，请及时打卡。</view>
       <view class="tips-item">请授予定位权限，否则无法打卡。</view>
     </view>
   </g-scroll>

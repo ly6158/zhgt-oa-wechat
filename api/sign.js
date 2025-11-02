@@ -6,6 +6,10 @@
    return request(`${prefix}/search`, 'GET', params);
  }
 
+ export const user_all = (params) => {
+  return request(`${prefix}/user-all`, 'GET', params);
+}
+
  export const user_search = (params) => {
   return request(`${prefix}/user-search`, 'GET', params);
 }
