@@ -4,6 +4,7 @@
     "pages/login/index",
     "pages/home/index",
     "pages/material/index",
+    "pages/project/index",
     "pages/report/edit/index",
     "pages/report/list/index",
     "pages/sign/index"
@@ -31,6 +32,7 @@
     "g-layout": "/components/GLayout/index",
     "g-scroll": "/components/GScroll/index",
     "c-empty": "/components/CEmpty/index",
+    "c-customer": "/components/CCustomer/index",
     "van-cell-group": "@vant/weapp/cell-group/index",
     "van-field": "@vant/weapp/field/index",
     "van-button": "@vant/weapp/button/index",
