@@ -4,7 +4,7 @@ module.exports = Behavior({
     isLoading: false, // 数据加载状态
     isRefresherTriggered: false, // 是否触发下拉刷新
     isCompleted: false, // 数据是否全部加载
-    pageSize: 10,
+    pageSize: 20,
     pageNum: 1,
     list: [],
     total: 0,
