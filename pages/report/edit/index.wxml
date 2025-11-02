@@ -3,7 +3,7 @@
     <van-cell-group>
       <van-cell title="关联项目" value="{{projectName}}" is-link bind:click="onChooseProject" />
       <van-cell title="业务类型" value="{{form.business_type}}" is-link bind:click="onChooseBusinessType" />
-      <van-field label="工作量" model:value="{{ form.quantity }}" clearable>
+      <van-field wx:if="{{form.business_type === '外业'}}" label="工作量" model:value="{{ form.quantity }}" clearable>
         <van-button slot="button" size="mini" plain type="primary" bind:click="onChooseUnit">{{form.unit}}</van-button>
       </van-field>
       <van-field label="日报内容" type="textarea" model:value="{{ content }}" autosize placeholder="日报内容" />
