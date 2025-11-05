@@ -1,9 +1,12 @@
 Page({
   data: {
-
+    flag:"user"
   },
   onLoad(options) {
-
+    const flag = wx.getStorageSync('flag')
+    this.setData({
+      flag
+    })
   },
 
   report(){
@@ -19,6 +22,11 @@ Page({
   project(){
     wx.navigateTo({
       url: '/pages/project/index'
+    })
+  },
+  reportManager(){
+    wx.navigateTo({
+      url: '/pages/report/all/index'
     })
   }
 })

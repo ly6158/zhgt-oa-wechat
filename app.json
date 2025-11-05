@@ -7,6 +7,7 @@
     "pages/project/index",
     "pages/report/edit/index",
     "pages/report/list/index",
+    "pages/report/all/index",
     "pages/sign/index"
   ],
   "requiredPrivateInfos": [

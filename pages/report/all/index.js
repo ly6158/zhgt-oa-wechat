@@ -2,7 +2,6 @@ import CommonList from "~/behaviors/common-list"
 import { formatTime } from '~/utils/util';
 import * as API from "~/api/report"
 
-
 Page({
   behaviors: [CommonList],
   data: {
@@ -19,7 +18,7 @@ Page({
   },
   getList() {
     return new Promise((resolve, reject) => {
-      API.user_search({
+      API.search({
         ...this.data.params,
         pageSize: this.data.pageSize,
         pageNum: this.data.pageNum
@@ -52,11 +51,6 @@ Page({
         })
         reject()
       })
-    })
-  },
-  toReport(){
-    wx.navigateTo({
-      url: '/pages/report/edit/index'
     })
   }
 })

@@ -22,10 +22,17 @@ Page({
       code: "000000",
       t: new Date().getTime()
     }).then(res => {
-      Toast('登录成功');
       wx.setStorageSync('Authorization', res.data)
-      wx.reLaunch({
-        url: '/pages/home/index'
+      API.getCurrentInfo().then(res=>{
+        const flag = res.data?.permission_role?.flag
+        wx.setStorageSync('flag', flag)
+
+        Toast('登录成功');
+        wx.reLaunch({
+          url: '/pages/home/index'
+        })
+      }).catch(err=>{
+        Toast.fail(err.message);
       })
     }).catch(err => {
       Toast.fail(err.message);

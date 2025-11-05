@@ -30,6 +30,17 @@
           <view class="icon cuIcon-file"></view>
         </view>
       </view>
+      
+      <!-- 管理员 菜单 -->
+      <view class="item bg-gradual-red" bindtap="reportManager" wx:if="{{flag === 'admin'}}">
+        <view class="left">
+          <view class="title">日报</view>
+          <view class="describe">所有的日志</view>
+        </view>
+        <view class="right">
+          <view class="icon cuIcon-text"></view>
+        </view>
+      </view>
     </view>
   </g-scroll>
 </g-layout>

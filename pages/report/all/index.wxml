@@ -1,0 +1,16 @@
+<g-layout title="日报" isTabBar="{{false}}" isBack="{{true}}" loading="{{page_loading}}">
+  <list-scroll isLoading="{{isLoading}}" isCompleted="{{isCompleted}}" refresherTriggered="{{isRefresherTriggered}}" total="{{total}}" bind:scrolltoupper="onDropDown" bind:scrolltolower="onLoadMore">
+    <view class="cu-list menu sm-border ">
+      <view class="report-item cu-item" wx:for="{{list}}" data-item="{{item}}">
+
+        <view class="report-header">
+          <text class="text-black name">{{item.create_user.name}}</text>
+          <text class="text-grey date">{{item.create_time}}</text>
+        </view>
+        <view class="report-content">
+          <text class="text-grey">{{item.content}}</text>
+        </view>
+      </view>
+    </view>
+  </list-scroll>
+</g-layout>

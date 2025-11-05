@@ -6,8 +6,12 @@ Page({
   },
   onLoad: function () {
     const token = wx.getStorageSync('Authorization')
+    
     if (token) {
       API.getCurrentInfo().then(res=>{
+        const flag = res.data?.permission_role?.flag
+        wx.setStorageSync('flag', flag)
+        
         wx.reLaunch({
           url: '/pages/home/index'
         })
