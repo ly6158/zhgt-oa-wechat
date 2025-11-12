@@ -11,26 +11,24 @@
   font-size: 48rpx;
 }
 
-.report-item{
+.report-item {
   display: flex;
   flex-direction: column;
   padding-top: 16rpx !important;
   padding-bottom: 16rpx !important;
 }
 
-.report-date{
+.report-date {
   width: 100%;
   display: flex;
   align-items: center;
   font-size: 28rpx;
 }
 
-.report-content{
+.report-content {
   width: 100%;
   display: flex;
   justify-content: flex-start;
   font-size: 24rpx;
   margin-top: 8rpx;
-  text-indent: 2em;
 }
-

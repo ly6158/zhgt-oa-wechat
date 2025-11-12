@@ -29,9 +29,6 @@ module.exports = Behavior({
      * 加载更多
      */
     onLoadMore() {
-      console.log('length',this.data.list?.length);
-      console.log('total',this.data.total);
-      
       if (this.data.list?.length < this.data.total) {
         this.setData({
           pageNum: this.data.pageNum + 1,

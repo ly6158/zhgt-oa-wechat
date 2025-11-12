@@ -1,0 +1,23 @@
+<g-layout title="咨询" isTabBar="{{false}}" isBack="{{true}}" loading="{{page_loading}}">
+  <list-scroll isLoading="{{isLoading}}" isCompleted="{{isCompleted}}" refresherTriggered="{{isRefresherTriggered}}" total="{{total}}" bind:scrolltoupper="onDropDown" bind:scrolltolower="onLoadMore">
+    <view class="cu-list menu sm-border ">
+      <view class="consult-item cu-item" wx:for="{{list}}" data-item="{{item}}" bind:tap="toMaterial">
+        <view class="consult-info">
+          <view class="consult-name">
+            <c-customer customer="{{item.customer}}" />
+          </view>
+          <view class="consult-tags">
+            <view class='cu-tag radius sm bg-orange light'>{{item.type}}</view>
+            <view wx:if="{{item.area}}" class='cu-tag radius sm bg-red light'>{{item.area}}公顷</view>
+          </view>
+          <view class="consult-content">
+            <text class="text-grey">{{item.remark}}</text>
+          </view>
+        </view>
+        <view class="arrow">
+          <text class="cuIcon-right text-grey"></text>
+        </view>
+      </view>
+    </view>
+  </list-scroll>
+</g-layout>

@@ -65,7 +65,6 @@ Component({
    */
   methods: {
     onLoadMore() {
-      console.log('ListScroll - onLoadMore');
       this.triggerEvent('scrolltolower')
     },
     onDropDown() {
@@ -80,12 +79,11 @@ Component({
       let that = this
       const query = wx.createSelectorQuery().in(this)
       query.select('#scrollViewTop').boundingClientRect(function (res) {
-        console.log(res);
         that.setData({
           top_height: res.height
         })
       }).exec()
-      
+
     },
   }
 })

@@ -28,7 +28,6 @@ const request = (url, method, params) => {
         }
       },
       fail: (err) => {
-        console.log('请求失败：', err);
         reject(-1);
       }
     })

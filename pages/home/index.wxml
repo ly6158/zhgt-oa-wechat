@@ -23,8 +23,18 @@
 
       <view class="item bg-gradual-pink" bindtap="project">
         <view class="left">
-          <view class="title">文档</view>
+          <view class="title">项目文档</view>
           <view class="describe">项目相关的文档资料</view>
+        </view>
+        <view class="right">
+          <view class="icon cuIcon-file"></view>
+        </view>
+      </view>
+
+      <view class="item bg-gradual-pink" bindtap="consult">
+        <view class="left">
+          <view class="title">咨询文档</view>
+          <view class="describe">咨询相关的文档资料</view>
         </view>
         <view class="right">
           <view class="icon cuIcon-file"></view>

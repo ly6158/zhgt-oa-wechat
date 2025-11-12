@@ -38,8 +38,6 @@ Page({
     })
   },
   onProjectConfirm(e) {
-    console.log('onProjectConfirm', e);
-
     const form = {
       ...this.data.form,
       project: e.detail.value.id
@@ -52,7 +50,6 @@ Page({
     })
   },
   onProjectCancel(e) {
-    console.log('onCancel', e);
     this.setData({
       isProjectPopup: false
     })
@@ -87,8 +84,6 @@ Page({
     })
   },
   onBusinessTypeConfirm(e) {
-    console.log('onBusinessTypeConfirm', e);
-
     const form = {
       ...this.data.form,
       business_type: e.detail.value
@@ -100,7 +95,6 @@ Page({
     })
   },
   onBusinessTypeCancel(e) {
-    console.log('onBusinessTypeCancel', e);
     this.setData({
       isBusinessTypePopup: false
     })
@@ -112,8 +106,6 @@ Page({
     })
   },
   onUnitConfirm(e) {
-    console.log('onUnitConfirm', e);
-
     const form = {
       ...this.data.form,
       unit: e.detail.value
@@ -125,7 +117,6 @@ Page({
     })
   },
   onUnitCancel(e) {
-    console.log('onUnitCancel', e);
     this.setData({
       isUnitPopup: false
     })
@@ -149,8 +140,6 @@ Page({
       ...this.data.form,
       content: this.data.content
     }
-
-    console.log('onSubmit', form);
 
     if (!form.content) {
       Toast.fail("日报内容不能为空!");

@@ -1,0 +1,37 @@
+.consult-item {
+  display: flex;
+  align-items: center;
+  padding-top: 16rpx !important;
+  padding-bottom: 16rpx !important;
+}
+
+.consult-info {
+  width: calc(100% - 40rpx);
+  display: flex;
+  flex-direction: column;
+  padding-right: 16rpx;
+  box-sizing: border-box;
+}
+
+.consult-name {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+}
+
+.consult-content {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 24rpx;
+  margin-top: 8rpx;
+}
+
+.arrow {
+  width: 40rpx;
+  height: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

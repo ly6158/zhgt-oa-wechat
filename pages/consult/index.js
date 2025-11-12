@@ -1,5 +1,5 @@
 import CommonList from "~/behaviors/common-list"
-import * as API from "~/api/project"
+import * as API from "~/api/consult"
 import {
   formatTime
 } from '~/utils/util';
@@ -56,7 +56,7 @@ Page({
       item
     } = e.currentTarget.dataset
     wx.navigateTo({
-      url: `/pages/material/index?id=${item.id}&module=project-interior`
+      url: `/pages/material/index?id=${item.id}&module=consult`
     })
   }
 })

@@ -1,6 +1,6 @@
 <view class="customer-wrap">
-  <text class="text-grey cuIcon-friend" style="margin-right: 8rpx;"></text>
-  <text class="text-grey" wx:if="{{customer.type === '企业'}}">{{customer.company_name}}</text>
+  <text class="{{fontColor}} cuIcon-friend" style="margin-right: 8rpx;"></text>
+  <text class="{{fontColor}}" wx:if="{{customer.type === '企业'}}">{{customer.company_name}}</text>
   <!-- <text class="text-grey" wx:if="{{customer.type === '企业' && customer.contact_name}}">（{{customer.contact_name}}）</text> -->
-  <text class="text-grey" wx:if="{{customer.type === '个人'}}">{{customer.contact_name}}</text>
+  <text class="{{fontColor}}" wx:if="{{customer.type === '个人'}}">{{customer.contact_name}}</text>
 </view>

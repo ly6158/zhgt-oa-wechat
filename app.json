@@ -5,6 +5,7 @@
     "pages/home/index",
     "pages/material/index",
     "pages/project/index",
+    "pages/consult/index",
     "pages/report/edit/index",
     "pages/report/list/index",
     "pages/report/all/index",

@@ -21,7 +21,8 @@ Page({
   },
   onLoad(options) {
     this.setData({
-      id: options.id
+      id: options.id,
+      module: options.module,
     })
     this.onRefresh()
   },

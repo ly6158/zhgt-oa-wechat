@@ -51,7 +51,6 @@ Component({
    */
   methods: {
     BackPage() {
-      console.log('back');
       wx.navigateBack({
         delta: 1
       });

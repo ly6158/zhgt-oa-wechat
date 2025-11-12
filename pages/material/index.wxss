@@ -1,5 +1,4 @@
 .material-item {
-  height: 160rpx;
   display: flex;
   align-items: center;
 }
@@ -16,26 +15,24 @@
   flex-direction: column;
   justify-content: center;
   padding-left: 32rpx;
+  margin: 16rpx 0;
 }
 
-.operation{
+.operation {
   width: 100rpx;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
-.name{
-  margin-bottom: 16rpx;
-}
-
-.date{
-  font-size: 24rpx;
-}
-
-.download{
+.name {
   font-size: 28rpx;
 }
 
+.date {
+  font-size: 24rpx;
+}
 
-
+.download {
+  font-size: 28rpx;
+}

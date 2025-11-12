@@ -24,6 +24,11 @@ Page({
       url: '/pages/project/index'
     })
   },
+  consult(){
+    wx.navigateTo({
+      url: '/pages/consult/index'
+    })
+  },
   reportManager(){
     wx.navigateTo({
       url: '/pages/report/all/index'

@@ -6,7 +6,11 @@ Component({
   properties: {
     customer: {
       type: Object,
-      value: ()=>({})
+      value: () => ({})
+    },
+    fontColor: {
+      type: String,
+      value: "text-black"
     }
   },
   data: {
